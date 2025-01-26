@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Using Include="Xunit" />
-    <ProjectReference Include="../Cos.Internal.Dashboards/Cos.Internal.Dashboards.csproj" />
   </ItemGroup>
 
 </Project>

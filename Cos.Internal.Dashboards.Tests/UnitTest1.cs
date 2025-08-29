@@ -1,4 +1,4 @@
-namespace Cos.Internal.Dashboards.Tests;
+﻿namespace Cos.Internal.Dashboards.Tests;
 
 public class UnitTest1
 {

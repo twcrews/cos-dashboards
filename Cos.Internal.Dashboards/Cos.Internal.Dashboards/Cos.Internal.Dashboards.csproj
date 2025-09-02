@@ -11,4 +11,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Crews.PlanningCenter.Api" Version="1.2.0" />
+  </ItemGroup>
+
 </Project>

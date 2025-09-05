@@ -1,5 +1,7 @@
 using Cos.Internal.Dashboards.Client.Pages;
 using Cos.Internal.Dashboards.Components;
+using Cos.Internal.Dashboards.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddDbContext<CosDahboardsContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CosDashboardsDatabase")));
 
 var app = builder.Build();
 

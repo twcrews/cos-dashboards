@@ -2,13 +2,10 @@
 
 namespace Cos.Internal.Dashboards.Data;
 
-public class CosDahboardsContext : DbContext
+public class CosDahboardsContext(DbContextOptions<CosDahboardsContext> options) : DbContext(options)
 {
     public DbSet<Dashboard> Blogs { get; set; }
     public DbSet<Widget> Posts { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseAzureSql();
 }
 
 public class Dashboard
